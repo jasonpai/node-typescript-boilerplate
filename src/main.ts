@@ -1,3 +1,5 @@
+import commandLineOptions from 'command-line-args';
+
 /**
  * Some predefined delay values (in milliseconds).
  */
@@ -32,3 +34,12 @@ export async function greeter(name: any) { // eslint-disable-line @typescript-es
   // The name parameter should be of type string. Any is used only to trigger the rule.
   return await delayedHello(name, Delays.Long);
 }
+
+
+// see https://www.npmjs.com/package/command-line-args
+const optionDefinitions = [
+  {name: 'name', alias: 'n', type: String}
+];
+const options = commandLineOptions(optionDefinitions);
+
+greeter(options.name).then(hello => console.error(hello));
