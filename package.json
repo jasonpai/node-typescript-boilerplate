@@ -36,6 +36,7 @@
   "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
   "license": "Apache-2.0",
   "dependencies": {
+    "command-line-args": "^5.2.1",
     "tslib": "~2.4"
   },
   "volta": {
